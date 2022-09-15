@@ -1,0 +1,15 @@
+asgiref
+certifi
+chardet
+charset-normalizer
+Django
+django-environ
+djangorestframework
+idna
+mysqlclient
+Pillow
+pytz
+requests
+sqlparse
+tzdata
+urllib3
