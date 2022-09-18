@@ -13,5 +13,6 @@ urlpatterns=[
     path('doctor',views.doctor,name='dr'),
     path('blog/',views.blog,name='blog'),
     path('pricing/',views.pricing,name='pricing'),
-    path('blog/<int:yr>/<str:mon>/<int:dy>/',views.blog_single,name='blog-n'),
+    path('blog/<int:yr>/<str:mon>/<int:dy>/',views.blog_single,name='blog_n'),
+    path('footer/subscribe',views.footer_form,name='footer')
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

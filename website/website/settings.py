@@ -29,7 +29,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
@@ -126,6 +126,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_FILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
+    BASE_DIR/'static',
 ]
 STATIC_ROOT=os.path.join(BASE_DIR,'static_root')
 #media
