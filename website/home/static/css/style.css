@@ -7998,11 +7998,11 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: blanchedalmond;
+  background: palegoldenrod;
   font-size: 15px;
   line-height: 1.8;
-  font-weight: 600;
-  color: grey;}
+  font-weight: 500;
+  color: darkslategray;}
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8097,7 +8097,7 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #000000; }
+      color: darkkhaki; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
@@ -8106,7 +8106,7 @@ h1, h2, h3, h4, h5,
         padding-bottom: .9rem;
         color: rgba(255, 255, 255, 0.7); }
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-          color: #fff; } }
+          color: darkkhaki; } }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
     background: #fff;
@@ -8148,7 +8148,7 @@ h1, h2, h3, h4, h5,
         color: #fff;
         background: #46b7de; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #46b7de; }
+    color: salmon; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
         color: #fff; } }
@@ -8251,8 +8251,8 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .5;
-    background: #46b7de; }
+    opacity: .4;
+    background: darkkhaki; }
   .hero-wrap.hero-wrap-2 {
     height: 300px; }
     .hero-wrap.hero-wrap-2 .slider-text {
@@ -8470,7 +8470,7 @@ h1, h2, h3, h4, h5,
   max-width: 1230px; }
 
 .bg-light {
-  background: #fafafa !important; }
+  background: palegoldenrod !important; }
 
 .bg-white {
   background: #fff !important; }
@@ -8528,17 +8528,17 @@ h1, h2, h3, h4, h5,
         border-color: #fff;
         color: #46b7de; }
   .btn.btn-secondary {
-    background: #a8c337;
-    border: 1px solid #a8c337;
+    background: darkkhaki;
+    border: 1px solid darkkhaki;
     color: #fff; }
     .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
-      border: 1px solid #a8c337;
+      border: 1px solid darkkhaki;
       color: #fff; }
 
 .btn-custom {
   font-weight: 500;
   color: #24a1cd;
-  border-bottom: 4px solid #57bee1; }
+  border-bottom: 4px solid darksalmon; }
 
 .img-2 {
   background-position: top center !important; }
@@ -8625,8 +8625,8 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .8;
-    background: #46b7de; }
+    opacity: .7;
+    background: khaki; }
 
 .staff {
   overflow: hidden;
@@ -8713,7 +8713,7 @@ h1, h2, h3, h4, h5,
     display: inline-block; }
 
 .pricing-entry {
-  border: 1px solid #c8eaf5;
+  border: 1px solid khaki;
   position: relative;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -8728,19 +8728,21 @@ h1, h2, h3, h4, h5,
     .pricing-entry > div p {
       margin-bottom: 0; }
   .pricing-entry h3 {
-    font-size: 16px;
-    font-weight: 400; }
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 2px ridge darksalmon; }
   .pricing-entry p .price {
     font-weight: 300;
-    font-size: 28px;
-    color: #46b7de;
+    font-size: 32px;
+    color: darkkhaki;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease; }
   .pricing-entry p .per {
-    font-size: 12px; }
+    font-size: 12px;
+    font-weight: bolder; }
   .pricing-entry ul {
     margin: 0;
     padding: 0; }
@@ -8748,7 +8750,7 @@ h1, h2, h3, h4, h5,
       list-style: none;
       padding: 10px 20px; }
       .pricing-entry ul li:nth-child(odd) {
-        background: #fafafa; }
+        background: lightgoldenrodyellow; }
   .pricing-entry .button {
     position: absolute;
     bottom: -26px;
@@ -8771,11 +8773,12 @@ h1, h2, h3, h4, h5,
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   .pricing-entry:hover .btn, .pricing-entry:focus .btn {
-    background: #a8c337 !important;
-    border: 1px solid #a8c337 !important;
+    background: salmon !important;
+    border: 1px solid lightgoldenrodyellow !important;
     color: #fff !important; }
   .pricing-entry:hover .price, .pricing-entry:focus .price {
-    color: #a8c337; }
+    color: salmon;
+    padding-top: 80%; }
 
 .block-20 {
   overflow: hidden;
@@ -9332,20 +9335,21 @@ textarea.form-control {
     letter-spacing: .1em; }
 
 .consultation {
-  background: salmon;
-  color: rgba(255, 255, 255, 0.9);
+  background: khaki;
+  color: darkslategrey;
   padding-top: 4em;
   padding-bottom: 4em; }
   .consultation.consul {
-    background: salmon; }
+    background-color: transparent;}
   .consultation h3 {
-    font-size: 20px;
-    color: #fff;
+    font-size: 30px;
+    color: var(--gray-dark);
+    text-decoration: wavy;
     font-weight: 500; }
   .consultation .btn-custom {
     font-size: 12px;
     text-transform: uppercase;
-    color: #fff;
+    color: gray;
     font-weight: 600; }
 
 .appointment-form .form-group {
@@ -9361,7 +9365,7 @@ textarea.form-control {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
     .appointment-form .form-group .icon span {
-      color: white !important; }
+      color: darkkhaki !important; }
   .appointment-form .form-group .select-wrap, .appointment-form .form-group .input-wrap {
     position: relative; }
     .appointment-form .form-group .select-wrap select, .appointment-form .form-group .input-wrap select {
@@ -9379,25 +9383,30 @@ textarea.form-control {
   padding-left: 0;
   padding-right: 0;
   background: transparent !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: darkslategrey !important;
+  font-style: oblique;
   font-size: 13px;
   border-radius: 0px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
   .appointment-form .form-control::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: rgba(255, 255, 255, 0.9); }
+    color: darkslategrey !important;
+    font-style: oblique;}
   .appointment-form .form-control::-moz-placeholder {
     /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.9); }
+    color: darkslategrey !important;
+    font-style: oblique; }
   .appointment-form .form-control:-ms-input-placeholder {
     /* IE 10+ */
-    color: rgba(255, 255, 255, 0.9); }
+    color: darkslategrey !important;
+    font-style: oblique; }
   .appointment-form .form-control:-moz-placeholder {
     /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.9); }
+    color: darkslategrey !important;
+    font-style: oblique; }
   .appointment-form .form-control:focus, .appointment-form .form-control:active {
-    border-color: #fff; }
+    border-color: salmon; }
 
 .appointment-form textarea.form-control {
   height: inherit !important; }
