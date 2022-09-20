@@ -8778,7 +8778,7 @@ h1, h2, h3, h4, h5,
     color: #fff !important; }
   .pricing-entry:hover .price, .pricing-entry:focus .price {
     color: salmon;
-    padding-top: 80%; }
+    padding-left: 9%; }
 
 .block-20 {
   overflow: hidden;
