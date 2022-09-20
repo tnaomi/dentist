@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dentist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+
+  <body>
+    {% include "partials/home_bar.html" %}
+	{% include "partials/navbar_home.html" %}
+    <!-- END nav -->
+    
+    {% include "partials/carousel.html" %}
+		
+	<!--Intro-->
+	{% include "partials/intro.html" %}
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container-fluid px-md-0">
+			<div class="row no-gutters">
+				<div class="col-md-3 d-flex align-items-stretch">
+					<div class="consultation w-100 text-center px-4 px-md-5">
+						<h3 class="mb-4">Dental Services</h3>
+						<p>Need help getting started?</p>
+						<a href="{% url 'dept' %}" class="btn-custom">See Services</a>
+					</div>
+				</div>
+				<div id="consult_form" class="col-md-6 d-flex align-items-stretch">
+					<div class="consultation consul w-100 px-4 px-md-5">
+						{% if first %}
+							<div class="text-center">
+								<h3 class="mb-4">Thank You, <strong>{{ first }}</strong>! We'll be in touch. </h3>
+							</div>
+						{% else %}
+							<div class="text-center">
+								<h3 class="mb-4">Get Your Free <strong>Consultation</strong> </h3>
+							</div>
+							<form action="{% url 'home' %}" class="appointment-form" method="post">
+								{% csrf_token %}
+								<div class="row">
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+										<input type="text" name="app_first" class="form-control" placeholder="First Name" aria-placeholder="Your First Name">
+									</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+										<input type="text" name="app_last" class="form-control" placeholder="Last Name" aria-placeholder="Your Last Name">
+									</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+										<div class="form-field">
+									<div class="select-wrap">
+										<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+										<select name="app_dept" id="choices" class="form-control">
+											<option value="">Department</option>
+											<option value="cosmetic">Cosmetic Dentistry</option>
+											<option value="implants">Dental Implants</option>
+											<option value="general">Dental Checkup</option>
+											<option value="whitening">Teeth Whitening</option>
+											<option value="recnstr">Reconstruction</option>
+											<option value="clipnbrace">Clips And Braces</option>
+											<option value="periodontics">Periodontics</option>
+										</select>
+									</div>
+								</div>
+									</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+										<div class="input-wrap">
+									<div class="icon"><span class="ion-md-calendar"></span></div>
+									<input type="text" name="app_date" class="form-control appointment_date" placeholder="Date" aria-placeholder="Appointment Date">
+								</div>
+									</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+										<div class="input-wrap">
+									<div class="icon"><span class="ion-ios-clock"></span></div>
+									<input type="text" name="app_time" class="form-control appointment_time" placeholder="Time" aria-placeholder="Preferred Appointment Time" aria-label="Preferred Appointment Time">
+								</div>
+									</div>
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-4">
+										<div class="form-group">
+								<input type="submit" value="Appointment" class="btn btn-secondary py-2 px-4" aria-label="Submit Details">
+							</div>
+									</div>
+								</div>
+							</form>
+						{% endif %}
+				</div>
+				</div>
+				<div class="col-md-3 d-flex align-items-stretch">
+					<div class="consultation w-100 text-center px-4 px-md-5">
+						<h3 class="mb-4">Find A Doctor</h3>
+						<p>Do not be in need when we are your friends indeed.</p>
+						<a href="{% url 'dr' %}" class="btn-custom">Meet our doctors</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+<!--SERVICES-->
+    <section class="ftco-section ftco-services">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">SERVICES</span><br>
+            <p class="text-center">Some of what we offer...</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+			{% include "partials/services.html" %}
+		</div>
+		</div>
+	</section>
+<!--TESTIMONY-->				
+    {% include "partials/testimony.html" %}
+
+    <section class="ftco-intro" style="background-image: url(/static/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h2>We Provide Free Dental Care Consultation</h2>
+						<p class="mb-0">Comprehensive, Affordable Medical Cover.</p>
+						<p></p>
+					</div>
+					<div class="col-md-3 d-flex align-items-center">
+						<p class="mb-0"><a href="#consult_form" class="btn btn-secondary px-4 py-3">Free Consultation</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <!--PRices-->
+	<section class="ftco-section">
+		{% include "partials/prices.html" %}
+	</section>
+<!--BLOG-->
+	<section class="ftco-section bg-light">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2">
+		<div class="col-md-8 text-center heading-section ftco-animate">
+		<span class="subheading">Blogs</span>
+		<h2 class="mb-4">Read our recent blogs</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 ftco-animate">
+			<div class="blog-entry">
+				<a href="{% url 'blog' %}" class="block-20 d-flex align-items-end justify-content-end" style="background-image: url('/static/images/image_1.jpg');">
+								<div class="meta-date text-center p-2">
+					<span class="day">18</span>
+					<span class="mos">September</span>
+					<span class="yr">2019</span>
+				</div>
+				</a>
+				<div class="text bg-white p-4">
+				<h3 class="heading"><a href="#">Scary Thing That You Do Not Get Enough Sleep</a></h3>
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+				<div class="d-flex align-items-center mt-4">
+					<p class="mb-0"><a href="#" class="btn btn-primary">Read More... <span class="ion-ios-arrow-round-forward"></span></a></p>
+					<p class="ml-auto mb-0">
+						<a href="#" class="mr-2">N. Chaturaga</a>
+						<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+					</p>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 ftco-animate">
+		<div class="blog-entry">
+			<a href="{% url 'blog' %}" class="block-20 d-flex align-items-end justify-content-end" style="background-image: url('/static/images/image_2.jpg');">
+				<div class="meta-date text-center p-2">
+					<span class="day">18</span>
+					<span class="mos">September</span>
+					<span class="yr">2022</span>
+			</div>
+			</a>
+			<div class="text bg-white p-4">
+			<h3 class="heading"><a href="{% url 'blog' %}">Scary Thing That You Do Not Get Enough Sleep</a></h3>
+			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+			<div class="d-flex align-items-center mt-4">
+				<p class="mb-0"><a href="#" class="btn btn-primary">Read More... <span class="ion-ios-arrow-round-forward"></span></a></p>
+				<p class="ml-auto mb-0">
+					<a href="#" class="mr-2">L. Wilson</a>
+					<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				</p>
+			</div>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-4 ftco-animate">
+		<div class="blog-entry">
+			<a href="{% url 'blog' %}" class="block-20 d-flex align-items-end justify-content-end" style="background-image: url('/static/images/image_3.jpg');">
+							<div class="meta-date text-center p-2">
+				<span class="day">18</span>
+				<span class="mos">September</span>
+				<span class="yr">2021</span>
+			</div>
+			</a>
+			<div class="text bg-white p-4">
+			<h3 class="heading"><a href="{% url 'blog' %}">Scary Thing That You Do Not Get Enough Sleep</a></h3>
+			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+			<div class="d-flex align-items-center mt-4">
+				<p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+				<p class="ml-auto mb-0">
+					<a href="#" class="mr-2">A. Parker</a>
+					<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+				</p>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+		</div>
+	</section>
+
+	<div class="container container-scroller">	
+    {% include "partials/footer.html" %}
+	</div>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+    {% include "partials/scripts.html" %}
+    
+  </body>
+</html>
