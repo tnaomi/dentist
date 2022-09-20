@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+import django_heroku
+import dj_database_url
+from decouple import config
 
 env = environ.Env(
     # set casting, default value
@@ -55,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -136,6 +140,8 @@ MEDIA_FILES_DIR=[
 ]
 MEDIA_ROOT=os.path.join(BASE_DIR,'media_root')
 
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 #EMAIL SETUP
 EMAIL_HOST=env('EMAIL_HOST')
 EMAIL_PORT=env('EMAIL_PORT')
@@ -146,3 +152,5 @@ EMAIL_USE_TLS=env('EMAIL_USE_TLS')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals)
