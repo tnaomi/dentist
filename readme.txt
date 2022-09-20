@@ -1,4 +1,9 @@
-Thank you for using our template!
+This is a website that I created as part of my first attempt to make a medical website template. I am using Django as the backend tool.
+
+
+
+
+
 
 For more awesome templates please visit https://colorlib.com/wp/templates/
 
